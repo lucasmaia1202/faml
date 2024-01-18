@@ -1,2 +1,4 @@
 .DS_store
-datasets/*.csv
+*__pycache__*
+datasets/**/*.csv
+submission.csv
