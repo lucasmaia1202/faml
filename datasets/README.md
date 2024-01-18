@@ -32,3 +32,52 @@ Additional holidays are days added a regular calendar holiday, for example, as t
 ### Additional Notes
 Wages in the public sector are paid every two weeks on the 15 th and on the last day of the month. Supermarket sales could be affected by this.
 A magnitude 7.8 earthquake struck Ecuador on April 16, 2016. People rallied in relief efforts donating water and other first need products which greatly affected supermarket sales for several weeks after the earthquake.
+
+```mermaid
+---
+title: Kaggle Store Sales Dataset
+---
+classDiagram
+    class data {
+        date
+        store_nbr
+        family
+        onpromotion
+    }
+
+    class train {
+        sales
+    }
+
+    class test {
+        ...
+    }
+
+    class holidays_events {
+        date
+        type
+        locale
+        description
+        transfered
+    }
+
+    class oil {
+        date
+        dcoilwtico
+    }
+
+    class stores {
+        city
+        state
+        type
+        cluster
+    }
+    
+    test <-- data
+    train <-- data
+
+    data <-- holidays_events
+    data <-- oil
+    data <-- stores
+
+```
